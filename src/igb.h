@@ -99,11 +99,11 @@ struct igb_adapter;
 #define IGB_DEFAULT_TXD                  256
 #define IGB_DEFAULT_TX_WORK		 128
 #define IGB_MIN_TXD                       80
-#define IGB_MAX_TXD                     4096
+#define IGB_MAX_TXD                     8192
 
 #define IGB_DEFAULT_RXD                  256
 #define IGB_MIN_RXD                       80
-#define IGB_MAX_RXD                     4096
+#define IGB_MAX_RXD                     8192
 
 #define IGB_MIN_ITR_USECS                 10 /* 100k irq/sec */
 #define IGB_MAX_ITR_USECS               8191 /* 120  irq/sec */
