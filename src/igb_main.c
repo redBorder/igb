@@ -60,11 +60,17 @@
 #define DRV_HW_PERF
 #define VERSION_SUFFIX
 
+#ifndef RELEASE_TAG
+#define RELEASE_TAG
+#endif
+
+
 #define MAJ 5
 #define MIN 3
 #define BUILD 3.2
 #define DRV_VERSION __stringify(MAJ) "." __stringify(MIN) "."\
-	__stringify(BUILD) VERSION_SUFFIX DRV_DEBUG DRV_HW_PERF
+	__stringify(BUILD) VERSION_SUFFIX DRV_DEBUG DRV_HW_PERF\
+	__stringify(RELEASE_TAG)
 
 char igb_driver_name[] = "igb";
 char igb_driver_version[] = DRV_VERSION;
