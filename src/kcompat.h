@@ -3390,7 +3390,7 @@ static inline void *_kc_vzalloc(unsigned long size)
 #ifndef vlan_get_protocol
 static inline __be16 __kc_vlan_get_protocol(const struct sk_buff *skb)
 {
-	if (vlan_tx_tag_present(skb) ||
+	if (skb_vlan_tag_get(skb) ||
 	    skb->protocol != cpu_to_be16(ETH_P_8021Q))
 		return skb->protocol;
 
